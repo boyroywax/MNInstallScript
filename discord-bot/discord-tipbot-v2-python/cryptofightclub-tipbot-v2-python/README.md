@@ -1,4 +1,4 @@
-# BOXY-Tip-Bot
+# CFCC-Tip-Bot
 
 
 These files are intended to function as a multi-functional tipbot for CryptoFightClub Coin (CFCC).
@@ -67,7 +67,7 @@ pip install PyMySQL
 ```
 ## Clone tipbot repository
 ```
-git clone https://github.com/boyroywax/BOXYBot
+git clone https://github.com/boyroywax/crypto-currency.git
 ```
 
 ## Configuration
