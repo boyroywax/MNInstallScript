@@ -1,7 +1,7 @@
-# BOXY-Tip-Bot
+# PRiVCY-Tip-Bot
 
 
-These files are intended to function as a multi-functional tipbot for BOXY Coin (BOXY).
+These files are intended to function as a multi-functional tipbot for PRiVCY Coin.
 
 # Requirements
 * discord.py installed
