@@ -1,0 +1,25 @@
+
+{
+  // Bot configuration
+  "bot": {
+      "token":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "prefix": "$",
+      "debug": true
+  },
+  "privcyd": {
+      "port": 3335,
+      "user": "XXXXXXXXXXXXXXXXXX",
+      "pass": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+  },
+  "moderation":{
+  "pm2Name": "TipBot",
+   // Roles that have access to all commands.
+  "perms": ["Dev Team","Community Manager","BOXY Tip Bot"],
+  // Bot Devs!
+  "botDev": "Dev Team",
+  // Channel to log the bots moderation..
+  "logchannel": "481346864747118602",
+  //channel that the tip message will reply in if Multi or Role tip is used.
+  "botspamchannels": ["481348152218353675", "481348218232504341", "481631887492644895", "482130401595490315"]
+  }
+}

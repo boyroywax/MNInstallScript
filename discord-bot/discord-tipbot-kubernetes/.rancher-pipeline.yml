@@ -1,0 +1,13 @@
+stages:
+- name: build bot
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./bot/Dockerfile
+      buildContext: .
+      tag: bot-boxy:v3.0
+      registry: 127.0.0.1:34059
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./k8s-spec/bot-deployment.yaml
+timeout: 60

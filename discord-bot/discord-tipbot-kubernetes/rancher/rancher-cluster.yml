@@ -1,0 +1,22 @@
+nodes:
+  - address: 68.183.162.202
+    internal_address: 10.138.50.206
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+    ssh_key_path: ~/Documents/GitHub/boxy-k8s/rancher/node1/id_rsa
+  - address: 68.183.172.221
+    internal_address: 10.138.50.80
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+    ssh_key_path: ~/Documents/GitHub/boxy-k8s/rancher/node3/id_rsa
+  - address: 104.248.78.120
+    internal_address: 10.138.210.219
+    user: ubuntu
+    role: [controlplane,worker,etcd]
+    ssh_key_path: ~/Documents/GitHub/boxy-k8s/rancher/node2/id_rsa
+
+services:
+  etcd:
+    snapshot: true
+    creation: 6h
+    retention: 24h

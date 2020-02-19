@@ -1,0 +1,11 @@
+backups/*
+.DS_Store
+wallet/bootstrap.dat
+wallet/boxy.conf
+.vscode/*
+kompose
+bot/__pycache__/*
+discord.log
+k8s-spec-test/*
+Dockerfile
+.venv

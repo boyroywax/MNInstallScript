@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wallet-service
+spec:
+  ports:
+  - name: 3335tcp1
+    port: 3335
+    targetPort: 3335
+    nodePort: 30333
+  selector:
+    app: wallet
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wallet-service2
+spec:
+  ports:
+  - name: 3336tcp2
+    port: 3336
+    protocol: TCP
+    targetPort: 3336
+  selector:
+    app: wallet
+  sessionAffinity: None
+  type: ClusterIP 
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: wallet-boxy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wallet
+    spec:
+      containers:
+      - image: boyroywax/boxy-wallet-v3.1-ubuntu16.04:latest
+        name: wallet-boxy
+        ports:
+        - containerPort: 3335
+          name: 3335tcp1
+          protocol: TCP
+        - containerPort: 3336
+          name: 3336tcp2
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /root/.boxy
+          name: boxy-vol1
+          subPath: boxy/
+      volumes:
+      - name: boxy-vol1 
+        persistentVolumeClaim:
+          claimName: boxy-volume
+      restartPolicy: Always
+status: {}

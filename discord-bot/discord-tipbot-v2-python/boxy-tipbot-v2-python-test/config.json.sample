@@ -1,0 +1,34 @@
+{"data": [
+    {
+        "discord": {
+            "token": "put the bot token here"
+        },
+        "mysql": {
+            "db_host": "localhost",
+            "db_user": "root",
+            "db_pass": "put mysql password here",
+            "db": "mysql"
+        },
+        "rpc": {
+            "rpc_host": "127.0.0.1",
+            "rpc_port": "6269",
+            "rpc_user": "this username should match the one in the wallet config",
+            "rpc_pass": "this password should match the one in the wallet config"
+        },
+        "logging": {
+            "print_level": 3,
+            "file": "log.txt",
+            "file_level": 3
+        },
+        "soak": {
+            "soak_max_recipients": 200,
+            "use_max_recipients": true,
+            "soak_min_received": 0.0001,
+            "use_min_received": true
+        },
+        "txfee": 0,
+        "owners": ["put your discord id here"],
+        "prefix": "bws.",
+        "description": "BWS Tipbot"
+    }
+]}

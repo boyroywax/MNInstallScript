@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: bot-service
+spec:
+  selector:
+    app: bot
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-boxy
+  labels:
+      app: bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bot
+  template:
+    metadata:
+      labels:
+        app: bot
+    spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+      containers:
+      - name: bot
+        image: ${CICD_REGISTRY}/bot-boxy:v3.0
+        ports:
+        - containerPort: 80
+      restartPolicy: Always

@@ -1,0 +1,25 @@
+{
+  // Bot configuration
+  "bot": {
+      "token":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "prefix": "$",
+      "debug": true
+  },
+
+  "legiond": {
+      "port": 3335,
+      "user": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "pass": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    },
+  "moderation":{
+  "pm2Name": "TipBot",
+   // Roles that have access to all commands.
+  "perms": ["Dev Team","Community Manager","BOXY Tip Bot"],
+  // Bot Devs!
+  "botDev": "Dev Team",
+  // Channel to log the bots moderation..
+  "logchannel": "482365241481625610",
+  //channel that the tip message will reply in if Multi or Role tip is used.
+  "botspamchannels": ["482365214151409679", "482460134530875393", "482462190104870912"]
+  }
+}
