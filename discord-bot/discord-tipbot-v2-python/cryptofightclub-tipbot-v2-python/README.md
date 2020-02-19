@@ -7,7 +7,7 @@ These files are intended to function as a multi-functional tipbot for CryptoFigh
 * discord.py installed
 * Python 3.6+
 * A MySQL database
-* The BOXY wallet w/ RPC enabled.
+* The CFCC wallet w/ RPC enabled.
 
 # Functions
 * Display general wallet information
